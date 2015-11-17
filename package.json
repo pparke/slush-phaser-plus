@@ -1,6 +1,6 @@
 {
   "name": "generator-yo-phaser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Yeoman generator for Phaser projects",
   "keywords": [
     "yeoman-generator"
@@ -26,6 +26,5 @@
     "lodash": "^3.10.1",
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^0.21.1"
-  },
-  "license": "MIT"
+  }
 }
