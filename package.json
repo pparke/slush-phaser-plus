@@ -1,47 +1,24 @@
 {
-  "name": "slush-phaser-plus",
-  "description": "A Slush generator for Phaser web game projects, packed with lots of good features.",
-  "version": "0.0.6",
-  "homepage": "https://github.com/rblopes/slush-phaser-plus#readme",
-  "author": "Rafael Barbosa Lopes <rafael.barbosalopes@gmail.com>",
-  "contributors": [],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rblopes/slush-phaser-plus.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rblopes/slush-phaser-plus/issues"
-  },
+  "name": "generator-yo-phaser",
+  "version": "0.0.1",
+  "description": "A Yeoman generator for Phaser projects",
   "keywords": [
-    "gamedev",
-    "phaser",
-    "slushgenerator"
+    "yeoman-generator"
   ],
-  "main": "slushfile.js",
+  "main": "index.js",
   "scripts": {
-    "lint": "eslint slushfile.js/ test/",
-    "test": "NODE_ENV=test mocha test/test-*.js --reporter spec"
+    "test": "mocha"
   },
-  "preferGlobal": true,
-  "engines": {
-    "node": ">=0.10.0"
-  },
+  "files": [
+    "generators/app",
+    "generators/object"
+  ],
+  "author": "pparke",
+  "license": "MIT",
   "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-conflict": "^0.4.0",
-    "gulp-filter": "^3.0.0",
-    "gulp-hb": "^2.6.0",
-    "gulp-install": "~0.3.0",
-    "gulp-load-plugins": "~1.1.0",
-    "gulp-rename": "^1.2.2",
-    "inquirer": "~0.11.0",
-    "lodash": "^3.7.0",
-    "promise": "^7.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^1.0.0",
-    "mocha": "^2.2.5",
-    "mock-gulp-dest": "^0.1.1"
-  },
-  "license": "MIT"
+    "chalk": "^1.1.1",
+    "lodash": "^3.10.1",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.21.1"
+  }
 }

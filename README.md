@@ -1,141 +1,44 @@
-[`slush-phaser-plus`][npm.]
-===========================
+[`yo-phaser`][npm.]
+===============
 
-[![npm version][fury]][npm.]
-[![Dependencies][ddmb]][ddm.]
-[![Travis CI Build Status][tcib]][tci.]
+A fork of the excellent [`slush-phaser-plus`][npm.] converted to use [Yeoman](http://yeoman.io/).
 
->   **HIGHLY EXPERIMENTAL!** A Slush generator for [Phaser][phsr] web game 
->   projects, packed with lots of good features.
+Uses [Gulp][gulp], [BrowserSync][bsnc], [Browserify][brsy], and [Babel][babl] to development in ES6 in a live environment.
 
+Prerequisites
+-------------
+* [Node.js](http://nodejs.org/) (with NPM)
+* [Yeoman](http://yeoman.io/)
 
-Batteries included
-------------------
-
-Every project created with this generator includes the following tool-set:
-
-*   [Gulp][gulp] task manager, to handle development and distribution tasks,
-    with alternative npm scripts provided.
-
-*   [BrowserSync][bsnc] development server for cross-device testing.
-
-*   [Browserify][brsy] support for easier management of components and
-    dependency tracking.
-
-*   [Babel][babl] to compile scripts written in ECMAScript 2015 (and future
-    specs) into scripts compatible with today's browsers. Check which [language
-    features][feat] are currently supported.
-
-*   [EditorConfig][edcf] support, for consistent editor configuration between
-    collaborators — check if [EditorConfig support][ecpl] is available for your
-    code editor.
-
-*   [ESLint][eslt] for code quality check.
-
-*   Customizable scripts for automated [Audio Sprites][ausp] generation
-    (Requires [FFMpeg][ffmp]).
-
-The generated sample project is based on my [`phaser-plus-template`][p+tp] and,
-using this generator, you always get a working project similar to that. In
-fact, that project began before `slush-phaser-plus`, and it is regularly
-updated with improvements and bug fixes. If you have questions regarding the
-sample project or want to contribute with suggestions or bug fixes, feel free
-to ask there.
-
-
-Installation Instructions
--------------------------
-
-Firstly, you need a development environment compatible with `Node.js` properly
-installed and configured in your system to use with this generator. After that,
-use `npm` to install `slush-phaser-plus` (and `slush`, if you didn't already),
-issuing the following commands on a terminal emulator:
-
+Installation
+------------
 ```sh
-npm install --global slush              # To install `slush`.
-npm install --global slush-phaser-plus  # To install this generator.
+npm install -g yo yo-phaser
 ```
 
-Also, it's a good idea to have these installed too, as you may find them useful
-later:
+Usage
+-----
+Create a new directory for your project to live in, change to the directory and run the generator.
 
 ```sh
-npm install --global gulp   # A task manager and streaming build system.
+mkdir <project-name>
+cd <project-name>
+yo phaser-plus
 ```
 
-
-### Usage #####################################################################
-
-Start by creating a new directory to host your new project contents and go
-inside it, then run `slush-phaser-plus`, issuing the following commands, like
-in the example below:
+Sub-generators
+--------------
+There are three sub-generators for common tasks.
 
 ```sh
-mkdir my-project  # Note: Replace 'my-project' with whatever you like.
-cd my-project
-slush phaser-plus
+yo yo-phaser:<sub-generator>
 ```
 
-A brief questionnaire, asking you some details about your soon-to-be new game
-project, should appear. Answer every question to proceed with the project
-creation. `slush-phaser-plus` will take care of installing all project
-dependencies for you automatically.
-
-
-### Available sub-generators ##################################################
-
-`slush-phaser-plus` comes with some preset sub-generators to aid you in some
-common game development tasks with Phaser. To use any of these, just run
-`slush-phaser-plus` as you would, appending the name of your desired 
-sub-generator.
-
-```sh
-$ slush phaser-plus:<sub-generator>
-```
-
-The following sub-generators are available, performing the tasks as described:
-
-*   `state` : Generates `Phaser.State` classes.
-*   `object`: Helps creating game objects from a set of base classes.
-*   `plugin`: A boilerplate for your own Phaser plug-ins.
-
+* `state`   : Generates a new class extending `Phaser.State` and adds it to the imported states.
+* `object`  : Allows you to select a Phaser base class to extend
+* `plugin`  : Extends `Phaser.Plugin`
 
 License
 -------
 
 Source code distributed under the terms of the [MIT License](LICENSE).
-
-
-Did you know?
--------------
-
-[Slush][slus] is a tool that uses Gulp for project scaffolding.
-
-Slush does not contain anything "out of the box", except the ability to locate
-installed slush generators and to run them with [`liftoff`][lift].
-
-To find out more about Slush, check out the [documentation][slus].
-
-
-<!-- Links ---------------------------------------------------------------- -->
-
-[phsr]: http://phaser.io/
-[eslt]: http://eslint.org/
-[gulp]: http://gulpjs.com/
-[babl]: https://babeljs.io/
-[brsy]: http://browserify.org/
-[ffmp]: https://www.ffmpeg.org/
-[edcf]: http://editorconfig.org/
-[bsnc]: http://www.browsersync.io/
-[slus]: https://github.com/slushjs/slush
-[ecpl]: http://editorconfig.org/#download
-[feat]: http://babeljs.io/docs/learn-es2015/
-[lift]: https://www.npmjs.com/package/liftoff
-[ausp]: https://github.com/tonistiigi/audiosprite
-[ddm.]: https://david-dm.org/rblopes/slush-phaser-plus
-[fury]: https://badge.fury.io/js/slush-phaser-plus.svg
-[npm.]: https://www.npmjs.com/package/slush-phaser-plus
-[p+tp]: https://github.com/rblopes/phaser-plus-template
-[tci.]: https://travis-ci.org/rblopes/slush-phaser-plus
-[ddmb]: https://david-dm.org/rblopes/slush-phaser-plus.svg
-[tcib]: https://travis-ci.org/rblopes/slush-phaser-plus.svg
