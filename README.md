@@ -13,7 +13,7 @@ Prerequisites
 Installation
 ------------
 ```sh
-npm install -g yo yo-phaser
+npm install -g yo generator-yo-phaser
 ```
 
 Usage
