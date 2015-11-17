@@ -1,9 +1,9 @@
-[`yo-phaser`][npm.]
+yo-phaser
 ===============
 
-A fork of the excellent [`slush-phaser-plus`][npm.] converted to use [Yeoman](http://yeoman.io/).
+A fork of the excellent [slush-phaser-plus](https://github.com/rblopes/slush-phaser-plus) converted to use [Yeoman](http://yeoman.io/).
 
-Uses [Gulp][gulp], [BrowserSync][bsnc], [Browserify][brsy], and [Babel][babl] to development in ES6 in a live environment.
+Uses [Gulp](http://gulpjs.com/), [BrowserSync](http://www.browsersync.io/), [Browserify](http://browserify.org/), and [Babel](https://babeljs.io/) to development in ES6 in a live environment.
 
 Prerequisites
 -------------
