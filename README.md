@@ -23,7 +23,7 @@ Create a new directory for your project to live in, change to the directory and 
 ```sh
 mkdir <project-name>
 cd <project-name>
-yo phaser-plus
+yo yo-phaser
 ```
 
 Sub-generators
