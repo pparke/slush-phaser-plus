@@ -1,9 +1,21 @@
 {
   "name": "generator-yo-phaser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Yeoman generator for Phaser projects",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "phaser",
+    "gamedev",
+    "es6",
+    "es2015",
+    "livereload",
+    "game",
+    "html5",
+    "engine",
+    "mobile",
+    "browser-sync",
+    "browserify",
+    "scaffold"
   ],
   "repository": {
     "type": "git",
@@ -26,5 +38,6 @@
     "lodash": "^3.10.1",
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^0.21.1"
-  }
+  },
+  "devDependencies": {}
 }

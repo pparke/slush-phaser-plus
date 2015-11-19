@@ -1,13 +1,17 @@
 /*
  * <%= name %>
- * @extends <%= baseClass %>
+<%if (baseClass !== 'None') {
+%> * @extends Phaser.<%= baseClass %>
  * ============================================================================
+<% } else {
+%> * ============================================================================
+<% }
+%> * <%= description %>
  *
- * <%= description %>
  */
 
 
-class <%= name %> extends Phaser.<%= baseClass %> {
+class <%= name %><%if (baseClass !== 'None') { %> extends Phaser.<%= baseClass %><% } %> {
   constructor (game, ... args) {
     super(game, ... args);
 

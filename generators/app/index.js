@@ -113,6 +113,9 @@ module.exports = generators.Base.extend({
       mkdirp.sync('gulpfile.js/tasks/helpers');
       this.template('gulpfile.js/tasks/helpers/_bundler.js', 'gulpfile.js/tasks/helpers/bundler.js');
 
+      // create test directory
+      mkdirp.sync('test');
+
       // setup config files
       this.template('_babelrc', '.babelrc');
       this.template('_editorconfig', '.editorconfig');

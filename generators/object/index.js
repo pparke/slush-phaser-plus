@@ -37,7 +37,7 @@ module.exports = generators.Base.extend({
         type    : 'list',
         name    : 'baseClass',
         message : 'Choose a base class to extend',
-        choices : [ 'Sprite', 'Group', 'Image', 'Button', 'Graphics', 'Other' ]
+        choices : [ 'Sprite', 'Group', 'Image', 'Button', 'Graphics', 'Other', 'None' ]
       },
       {
         type    : 'input',
@@ -45,6 +45,9 @@ module.exports = generators.Base.extend({
         message : 'Enter the name of the class you wish to extend',
         when    : function (answers) {
           return answers.baseClass === 'Other';
+        },
+        validate: function (input) {
+          return !(!input || typeof input !== 'string');
         },
         filter  : _.capitalize
       },
