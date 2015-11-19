@@ -1,6 +1,8 @@
 yo-phaser
 ===============
 
+[![Build Status](https://travis-ci.org/pparke/slush-phaser-plus.svg?branch=master)](https://travis-ci.org/pparke/slush-phaser-plus)
+
 A fork of the excellent [slush-phaser-plus](https://github.com/rblopes/slush-phaser-plus) converted to use [Yeoman](http://yeoman.io/).
 
 Uses [Gulp](http://gulpjs.com/), [BrowserSync](http://www.browsersync.io/), [Browserify](http://browserify.org/), and [Babel](https://babeljs.io/) for development in ES6 in a live environment.
