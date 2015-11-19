@@ -23,6 +23,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "lint": "eslint generators/ test/",
     "test": "mocha"
   },
   "files": [
@@ -40,6 +41,7 @@
     "yeoman-generator": "^0.21.1"
   },
   "devDependencies": {
+    "eslint": "^1.9.0",
     "mocha": "^2.3.4"
   }
 }

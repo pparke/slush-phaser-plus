@@ -7,11 +7,10 @@ var _           = require('lodash/string');
 
 module.exports = generators.Base.extend({
   prompting: {
-    getDetails: function() {
+    getDetails: function () {
       var done = this.async();
 
-      this.prompt([
-      {
+      this.prompt([ {
         type    : 'input',
         name    : 'name',
         message : 'Enter the name of the file you wish to test',
@@ -58,7 +57,7 @@ module.exports = generators.Base.extend({
         type    : 'confirm',
         name    : 'proceed',
         message : 'Create test?'
-      }],
+      } ],
       function (answers) {
         if (!answers.proceed) {
           this.env.error('Class creation aborted');
@@ -71,9 +70,9 @@ module.exports = generators.Base.extend({
     }
   },
 
-  writing: function() {
+  writing: function () {
     if (!this.fs.exists(this.path + this.name)) {
-      this.log('File %s%s does not exist yet, please make sure to create it before running the test', this.path, this.name)
+      this.log('File %s%s does not exist yet, please make sure to create it before running the test', this.path, this.name);
     }
     this.log('Creating test file test/%s.js', this.name);
     var dir = 'test';

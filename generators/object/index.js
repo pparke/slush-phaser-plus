@@ -7,10 +7,10 @@ var _           = require('lodash/string');
 
 module.exports = generators.Base.extend({
   prompting: {
-    getDetails: function() {
+    getDetails: function () {
       var done = this.async();
 
-      this.prompt([{
+      this.prompt([ {
         type    : 'input',
         name    : 'name',
         message : 'Enter the class name',
@@ -55,7 +55,7 @@ module.exports = generators.Base.extend({
         type    : 'confirm',
         name    : 'proceed',
         message : 'Create class?'
-      }],
+      } ],
       function (answers) {
         if (!answers.proceed) {
           this.env.error('Class creation aborted');
@@ -69,7 +69,7 @@ module.exports = generators.Base.extend({
     }
   },
 
-  writing: function() {
+  writing: function () {
     var dir = 'src/app/objects';
     // create the sub directory if necessary
     if (this.subdir) {

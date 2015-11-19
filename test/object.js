@@ -5,10 +5,10 @@
  var assert   = require('yeoman-generator').assert;
  var path     = require('path');
 
- describe('yo-phaser:object', function() {
+ describe('yo-phaser:object', function () {
 
-   describe('create a new class that extends Phaser.Sprite', function() {
-     before(function(done) {
+   describe('create a new class that extends Phaser.Sprite', function () {
+     before(function (done) {
        helpers.run(path.join(__dirname, '../generators/object'))
        .withPrompts({
          name: 'TestClass',
@@ -20,11 +20,11 @@
        .on('end', done);
      });
 
-     it('src/app/objects/TestClass.js should exist', function() {
-       assert.file(['src/app/objects/TestClass.js']);
+     it('src/app/objects/TestClass.js should exist', function () {
+       assert.file([ 'src/app/objects/TestClass.js' ]);
      });
 
-     it('the content of the file should be as expected', function() {
+     it('the content of the file should be as expected', function () {
        assert.fileContent('src/app/objects/TestClass.js', '* TestClass');
        assert.fileContent('src/app/objects/TestClass.js', '* @extends Phaser.Sprite');
        assert.fileContent('src/app/objects/TestClass.js', '* A test class');
@@ -33,8 +33,8 @@
      });
    });
 
-   describe('create a new class that that extends nothing and exists in a subdirectory', function() {
-     before(function(done) {
+   describe('create a new class that that extends nothing and exists in a subdirectory', function () {
+     before(function (done) {
        helpers.run(path.join(__dirname, '../generators/object'))
        .withPrompts({
          name: 'TestClass',
@@ -46,11 +46,11 @@
        .on('end', done);
      });
 
-     it('src/app/objects/sprites/player/TestClass.js should exist', function() {
-       assert.file(['src/app/objects/sprites/player/TestClass.js']);
+     it('src/app/objects/sprites/player/TestClass.js should exist', function () {
+       assert.file([ 'src/app/objects/sprites/player/TestClass.js' ]);
      });
 
-     it('the content of the file should be as expected', function() {
+     it('the content of the file should be as expected', function () {
        assert.fileContent(  'src/app/objects/sprites/player/TestClass.js', '* TestClass');
        assert.fileContent(  'src/app/objects/sprites/player/TestClass.js', '* A test class');
        assert.fileContent(  'src/app/objects/sprites/player/TestClass.js', 'class TestClass');
@@ -59,4 +59,4 @@
        assert.noFileContent('src/app/objects/sprites/player/TestClass.js', '* @extends Phaser.Sprite');
      });
    });
-});
+ });

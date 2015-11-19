@@ -5,10 +5,10 @@
  var assert   = require('yeoman-generator').assert;
  var path     = require('path');
 
- describe('yo-phaser:app', function() {
+ describe('yo-phaser:app', function () {
 
-   describe('setup directory structure and files', function() {
-     before(function(done) {
+   describe('setup directory structure and files', function () {
+     before(function (done) {
        helpers.run(path.join(__dirname, '../generators/app'))
        .withPrompts({
          title: 'Test App',
@@ -19,7 +19,7 @@
        .on('end', done);
      });
 
-     it('src folder should containe necessary files', function() {
+     it('src folder should containe necessary files', function () {
        assert.file([
          'src/app.js',
          'src/index.js',
@@ -32,11 +32,11 @@
        ]);
      });
 
-     it('resoures folder should contain sfx/README.md', function() {
-       assert.file(['resources/sfx/README.md']);
+     it('resoures folder should contain sfx/README.md', function () {
+       assert.file([ 'resources/sfx/README.md' ]);
      });
 
-     if('static folder should contain necessary files', function() {
+     it('static folder should contain necessary files', function () {
        assert.file([
          'static/browserconfig.xml',
          'static/index.html',
@@ -47,7 +47,7 @@
        ]);
      });
 
-     it('gulpfile.js folder should contain necessary files', function() {
+     it('gulpfile.js folder should contain necessary files', function () {
        assert.file([
          'gulpfile.js/config.js',
          'gulpfile.js/index.js',
@@ -57,7 +57,7 @@
        ]);
      });
 
-     it('project root folder should contain necessary files', function() {
+     it('project root folder should contain necessary files', function () {
        assert.file([
          '.babelrc',
          '.editorconfig',

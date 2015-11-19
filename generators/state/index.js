@@ -7,10 +7,10 @@ var _           = require('lodash/string');
 
 module.exports = generators.Base.extend({
   prompting: {
-    getDetails: function() {
+    getDetails: function () {
       var done = this.async();
 
-      this.prompt([{
+      this.prompt([ {
         type    : 'input',
         name    : 'name',
         message : 'Enter the state name',
@@ -30,7 +30,7 @@ module.exports = generators.Base.extend({
         type    : 'confirm',
         name    : 'proceed',
         message : 'Create state?'
-      }],
+      } ],
       function (answers) {
         if (!answers.proceed) {
           this.env.error('Class creation aborted');
@@ -43,7 +43,7 @@ module.exports = generators.Base.extend({
     }
   },
 
-  writing: function() {
+  writing: function () {
     var dir = 'src/app/states/';
     this.template('_state.js', dir + this.name + '.js');
 
@@ -51,7 +51,7 @@ module.exports = generators.Base.extend({
     try {
       var statesPath = this.destinationRoot() + '/src/app/states.js';
       var states = this.fs.read(statesPath);
-      states += "\nexport { default as " + this.name + "    } from './states/" + this.name + "';";
+      states += '\nexport { default as " + this.name + "    } from \'./states/" + this.name + "\';';
       this.log('Appending new state to states.js');
       this.fs.write(statesPath, states);
     }

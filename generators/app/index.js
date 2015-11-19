@@ -6,12 +6,12 @@ var mkdirp      = require('mkdirp');
 
 module.exports = generators.Base.extend({
   prompting: {
-    getDetails: function() {
+    getDetails: function () {
       var done = this.async();
       // greet the user
       this.log(this.yeoman);
       // prompt for details
-      this.prompt([{
+      this.prompt([ {
         type    : 'input',
         name    : 'title',
         message : 'Your project title',
@@ -36,7 +36,7 @@ module.exports = generators.Base.extend({
         type    : 'confirm',
         name    : 'proceed',
         message : 'Create project?'
-      }],
+      } ],
       function (answers) {
         if (!answers.proceed) {
           this.env.error('Project creation aborted');
@@ -50,7 +50,7 @@ module.exports = generators.Base.extend({
   },
 
   writing: {
-    setupDirectories: function() {
+    setupDirectories: function () {
       this.log('Setting up directory structure...');
       // setup src director
       mkdirp.sync('src');
@@ -128,8 +128,8 @@ module.exports = generators.Base.extend({
     }
   },
 
-  install: function() {
+  install: function () {
     this.log('Installing dependencies...');
-    this.npmInstall([''], { 'saveDev': true })
+    this.npmInstall([ '' ], { saveDev: true });
   }
 });
