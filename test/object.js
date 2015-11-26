@@ -57,6 +57,7 @@
        assert.fileContent(  'src/app/objects/sprites/player/TestClass.js', 'export default TestClass;');
        assert.noFileContent('src/app/objects/sprites/player/TestClass.js', 'extends Phaser.Sprite');
        assert.noFileContent('src/app/objects/sprites/player/TestClass.js', '* @extends Phaser.Sprite');
+       assert.noFileContent('src/app/objects/sprites/player/TestClass.js', 'super(game, ... args)');
      });
    });
  });

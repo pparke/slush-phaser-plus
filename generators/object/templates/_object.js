@@ -13,7 +13,7 @@
 
 class <%= name %><%if (baseClass !== 'None') { %> extends Phaser.<%= baseClass %><% } %> {
   constructor (game, ... args) {
-    super(game, ... args);
+    <%if (baseClass !== 'None') { %>super(game, ... args);<% } %>
 
     // TODO:
     //   1. Edit constructor parameters accordingly.
