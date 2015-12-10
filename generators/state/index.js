@@ -51,7 +51,7 @@ module.exports = generators.Base.extend({
     try {
       var statesPath = this.destinationRoot() + '/src/app/states.js';
       var states = this.fs.read(statesPath);
-      states += '\nexport { default as " + this.name + "    } from \'./states/" + this.name + "\';';
+      states += "\nexport { default as " + this.name + "    } from \'./states/" + this.name + "\';";
       this.log('Appending new state to states.js');
       this.fs.write(statesPath, states);
     }
