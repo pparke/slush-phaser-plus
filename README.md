@@ -48,7 +48,7 @@ yo yo-phaser:<sub-generator>
 ```
 
 * `state`   : Generates a new class extending `Phaser.State` and adds it to the imported states.
-* `object`  : Allows you to select a Phaser base class to extend
+* `object`  : Allows you to select a Phaser base class to extend or just create an empty class
 * `plugin`  : Extends `Phaser.Plugin`
 * `test`    : Creates a new test file for the class specified (does not yet support testing a full integration of Phaser, you must import any Phaser classes that you use)
 
