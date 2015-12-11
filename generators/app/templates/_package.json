@@ -36,6 +36,7 @@
     "clean": "gulp dist:clean",
     "start": "gulp default",
     "audiosprite": "audiosprite -e m4a -f jukebox -g 3",
-    "audiosprite:sfx": "npm run audiosprite -- -o static/assets/sfx resources/sfx/*.wav"
+    "audiosprite:sfx": "npm run audiosprite -- -o static/assets/sfx resources/sfx/*.wav",
+    "test": "mocha --compilers js:babel-core/register"
   }
 }
