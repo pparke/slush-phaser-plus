@@ -27,5 +27,6 @@
        assert.fileContent('src/app/states/TestState.js', '* A test state');
        assert.fileContent('src/app/states/TestState.js', 'export default class TestState extends Phaser.State');
      });
+
    });
  });
