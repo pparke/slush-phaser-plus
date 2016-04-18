@@ -4,39 +4,31 @@
 
 
 
-Development Instructions
--------------------------------------------------------------------------------
-
-The following `npm` scripts are available to you, performing the tasks as
-described below.
+Development
+-----------
+The following npm scripts are available to you, performing the tasks as described below.
 
 ```sh
 npm start     # Launch a development server. Same as `gulp dev`.
 npm run dist  # Prepare the game release for distribution. Also `gulp dist`.
 npm run clean # Delete temporary and distribution build files.
+npm test      # Run the test files contained in the test directory, supports es6 syntax
 ```
 
-There are also sub-generators that may be used as follows:
+Sub-generators
+--------------
+There are four sub-generators for common tasks.
 
 ```sh
-yo phaser-plus:<sub-generator>
+yo yo-phaser:<sub-generator>
 ```
 
-The following sub-generators are available, performing the tasks as described:
+* `state`   : Generates a new class extending `Phaser.State` and adds it to the imported states.
+* `object`  : Allows you to select a Phaser base class to extend or just create an empty class
+* `plugin`  : Extends `Phaser.Plugin`
+* `test`    : Creates a new test file for the class specified (does not yet support testing a full integration of Phaser, you must import any Phaser classes that you use)
 
-*   `state` : Generates `Phaser.State` classes.
-*   `object`: Helps creating game objects from a set of base classes.
-*   `plugin`: A boilerplate for your own Phaser plug-ins.
+License
+-------
 
-(Also, you may want to install Gulp globally, but you are not required to do
-so.)
-
-Should you consider distributing your game as an open source project, please
-[include a LICENSE file][lcnc] in your project root.
-
-Congrats and happy coding!
-
-
-<!-- ---------------------------------------------------------------------- -->
-
-[lcnc]: http://choosealicense.com
+Source code distributed under the terms of the [MIT License](LICENSE).
